@@ -1,0 +1,150 @@
+/* TicketCard.css */
+.ticket-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+  margin-bottom: 15px;
+  height: 100px; /* Reduced height for all cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space evenly */
+}
+
+.ticket-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.ticket-content {
+  flex: 1;
+}
+
+/* User profile image in the top-right corner */
+.user-info {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.user-picture {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #888;
+}
+
+.user-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  border: 2px solid #ffffff;
+}
+
+/* Styling for ticket title with multi-line truncation */
+.ticket-card h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+  display: -webkit-box; /* Required for multi-line truncation */
+  -webkit-line-clamp: 2; /* Limit to two lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds ellipsis if truncated */
+}
+
+/* Styling for the ticket tag and id */
+.ticket-tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tag-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.tag {
+  background-color: #eff2f5;
+  color: #555;
+  font-size: 11px;
+  border-radius: 12px;
+  padding: 4px 8px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* Adjust spacing and alignment */
+.ticket-id {
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.ticket-title-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between the checkbox and the title */
+}
+
+/* TicketCard.css */
+.ticket-checkbox {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%; /* Makes the checkbox rounded */
+  border: 2px solid #ccc;
+  appearance: none; /* Remove default checkbox styling */
+  outline: none;
+  background-color: #fff;
+  position: relative;
+}
+
+.ticket-checkbox:checked {
+  background-color: #084299; /* Change background color when checked */
+  border-color: #084299;
+}
+
+.ticket-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ticket-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.ticket-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between the tag and the icon */
+  /* margin-top: 8px; */
+  position: absolute;
+  bottom: 2px;
+}
+
+.menu-icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}

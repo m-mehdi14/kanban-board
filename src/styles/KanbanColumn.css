@@ -1,0 +1,74 @@
+.kanban-column-header {
+  background-color: #f0f0f0;
+  border-radius: 8px 8px 0 0;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center; /* Ensure vertical alignment */
+  gap: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  justify-content: space-between;
+}
+
+/* Adjust the header text to account for the priority icon */
+.kanban-column-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  padding-left: 15px;
+  flex-grow: 1;
+}
+
+/* Priority and status icon adjustments */
+.priority-icon {
+  width: 16px;
+  height: 16px;
+  align-self: center; /* Center vertically */
+  /* padding-top: 12px; */
+}
+
+.status-icon {
+  width: 14px;
+  height: 14px;
+  align-self: center; /* Center vertically */
+}
+
+/* Icons container adjustments */
+.kanban-column-icons {
+  display: flex;
+  align-items: center; /* Ensure icons are vertically centered */
+  gap: 8px;
+}
+
+.kanban-column-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-icon,
+.menu-icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .kanban-column {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .kanban-column {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .kanban-column {
+    width: calc(100% - 20px);
+  }
+}
